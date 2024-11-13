@@ -1,0 +1,181 @@
+.landingWrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--theme);
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+}
+.glass-background {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px);           /* Blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: subtle border */
+    border-radius: 10px;                   /* Optional: rounded corners */
+    padding: 20px;                         /* Adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+.gradient-glass-background {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(10px);           /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: subtle border */
+    border-radius: 12px;                   /* Rounded corners for glass effect */
+    padding: 20px;                         /* Add some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+  }
+  
+  
+.landingContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 95vh;
+    padding: 12px 0;
+    gap: 20px;
+}
+.topLanding{
+    width: 100%;
+    flex: 3;
+    display: flex;
+    gap: 20px;
+}
+.bottomLanding{
+    flex: 2;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.landingBoxWrapper{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%);
+    backdrop-filter: blur(10px);           /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border-radius: 12px;                   /* Rounded corners for glass effect */
+    /* padding: 20px;               */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+}
+
+.landingBox{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);           /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    border-radius: 12px;                   /* Rounded corners for glass effect */
+    padding: 20px;              
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+    cursor: pointer;
+    /* background-position: center;
+    background-size: cover;
+    filter: grayscale(100%); */
+    /* position: relative; */
+    /* position: absolute; */
+    /* width: 100%; */
+}
+.landingImg{
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* padding: 20px; */
+}
+.boxFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.selfInfo{
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+}
+.topRightLanding{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    gap: 20px;
+}
+.landingTwoBoxes{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    gap: 20px;
+}
+.aboutMeWrapper{
+    flex: 1;
+}
+.projectsWrapper{
+    flex: 1;
+}
+.profilePic{
+    background-color: gray;
+    width: 200px;
+    border-radius: 12px;
+}
+.profileInfo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+.socialMediaWrapper{
+    flex: 1;
+}
+.servicesWrapper{
+    flex: 2;
+}
+.letsWorkWrapper{
+    flex: 1;
+}
+.landingBox .boxText{
+    color: white;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.landingImg .boxText{
+    color: white;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px;
+}
+.landingBox .boxContent{
+    /* color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
+    font-weight: bolder; */
+}
+@media (max-width:800px) {
+    .landingWrapper{
+        height: auto;
+    }
+    .landingContainer{
+        height: auto;
+        padding: 20px;
+    }
+    .topLanding{
+        flex-direction: column;
+    }
+    .landingBox{
+        min-height: 150px;
+    }
+}
+@media (max-width:600px) {
+    .bottomLanding{
+        flex-direction: column ;
+    }
+}
