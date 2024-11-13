@@ -1,8 +1,8 @@
-import { ArrowRightCircleIcon, UserIcon } from "@heroicons/react/24/outline"
+import { ArrowRightCircleIcon, } from "@heroicons/react/24/outline"
 import aboutimg from '../assets/about.jpg'
-import projectsimg from '../assets/projects.jpg'
-import socialsimg from '../assets/socialmedia.jpg'
-import workimg from '../assets/work.jpg'
+// import projectsimg from '../assets/projects.jpg'
+// import socialsimg from '../assets/socialmedia.jpg'
+// import workimg from '../assets/work.jpg'
 
 
 
