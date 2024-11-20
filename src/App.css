@@ -48,6 +48,7 @@
     gap: 20px;
 }
 .landingBoxWrapper{
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)); */
     position: relative;
     background-position: center;
     background-size: cover;
@@ -57,6 +58,12 @@
     border-radius: 12px;                   /* Rounded corners for glass effect */
     /* padding: 20px;               */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+    /* transition: 0.4s; */
+    cursor: pointer;
+}
+.landingBoxWrapper:hover{
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 .landingBox{
@@ -81,6 +88,11 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     /* padding: 20px; */
+    transition: 0.4s;
+    border-radius: 12px;
+}
+.landingImg:hover{
+    background-color: transparent;
 }
 .boxFlex{
     display: flex;
@@ -161,7 +173,10 @@
 }
 @media (max-width:800px) {
     .landingWrapper{
+        min-height: 100vh;
         height: auto;
+        /* height: fit-content; */
+        /* height: max-content; */
     }
     .landingContainer{
         height: auto;
@@ -171,6 +186,12 @@
         flex-direction: column;
     }
     .landingBox{
+        min-height: 150px;
+    }
+    .landingImg{
+        min-height: 150px;
+    }
+    .landingBoxWrapper{
         min-height: 150px;
     }
 }

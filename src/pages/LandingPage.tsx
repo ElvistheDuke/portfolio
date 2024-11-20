@@ -1,8 +1,10 @@
 import { ArrowRightCircleIcon, } from "@heroicons/react/24/outline"
 import aboutimg from '../assets/about.jpg'
-// import projectsimg from '../assets/projects.jpg'
-// import socialsimg from '../assets/socialmedia.jpg'
-// import workimg from '../assets/work.jpg'
+import { motion } from "motion/react"
+import projectsimg from '../assets/projects.jpg'
+import socialsimg from '../assets/socialmedia.jpg'
+import workimg from '../assets/work.jpg'
+import LandingBox from "../components/LandingBox"
 
 
 
@@ -11,7 +13,20 @@ function LandingPage() {
     <div className="landingWrapper">
         <div className="landingContainer">
             <div className="topLanding">
-                <div className="selfInfo landingBox">
+                <motion.div
+                initial={{
+                    y: -60,
+                    opacity: 0
+                }}
+                animate={{
+                    y: 0,
+                    opacity: 1
+                }}
+                transition={{
+                    duration: 0.6,
+                    ease: 'easeInOut',
+                }}
+                className="selfInfo landingBox">
                     <div className="profilePic">
 
                     </div>
@@ -21,50 +36,47 @@ function LandingPage() {
                         {/* <h1>Ologeh</h1> */}
                         <p style={{fontSize: 12, color: "gray"}}>I am a Front End Web Developer based in Nigeria</p>
                     </div>
-                </div>
+                </motion.div>
                 <div className="topRightLanding">
-                    <div style={{minHeight: 'auto'}} className="sloganWrapper landingBox">
+                    <motion.div
+                    initial={{
+                        y: -60,
+                        opacity: 0
+                    }}
+                    animate={{
+                        y: 0,
+                        opacity: 1
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: 'easeInOut',
+                        delay: 0.1,
+                    }}
+                    style={{minHeight: 'auto'}} className="sloganWrapper landingBox">
                         <p style={{color: 'gainsboro', fontSize: 14, fontStyle: 'italic'}}>My Slogan Goes Here</p>
-                    </div>
+                    </motion.div>
                     <div className="landingTwoBoxes">
-                        <div style={{
-                                backgroundImage: `url(${aboutimg})`
-                            }} className="landingBoxWrapper aboutMeWrapper">
-                            <div  className="boxFlex landingImg">
-                                {/* <div className="blackOverlay"></div> */}
-                                <div className="boxContent">
-                                    {/* <p>ABOUT</p>
-                                    <p>ME</p> */}
-                                </div>
-                                <div className="boxText">
-                                    <p>ABOUT ME</p>
-                                    <ArrowRightCircleIcon height={32} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="projectsWrapper landingBox boxFlex">
-                            <div className="boxContent">
-
-                            </div>
-                            <div className="boxText">
-                                <p>PROJECTS</p>
-                                <ArrowRightCircleIcon height={32} />
-                            </div>
-                        </div>
+                        <LandingBox flex={1} imageurl={aboutimg} delay={0.3} title="ABOUT ME" />
+                        <LandingBox flex={1} imageurl={projectsimg} delay={0.4} title="MY PROJECTS" />
                     </div>
                 </div>
             </div>
             <div className="bottomLanding">
-                <div className="socialMediaWrapper landingBox boxFlex">
-                    <div className="boxContent">
-
+                {/* <div style={{
+                        backgroundImage: `url(${socialsimg})`
+                    }} className="landingBoxWrapper socialMediaWrapper">
+                    <div  className="boxFlex landingImg">
+                        <div className="boxContent">
+                        </div>
+                        <div className="boxText">
+                            <p>SOCIAL MEDIA</p>
+                            <ArrowRightCircleIcon height={32} />
+                        </div>
                     </div>
-                    <div className="boxText">
-                        <p>SOCIAL MEDIA</p>
-                        <ArrowRightCircleIcon height={32} />
-                    </div>
-                </div>
-                <div className="servicesWrapper landingBox boxFlex">
+                </div> */}
+                <LandingBox flex={1} imageurl={socialsimg} delay={0.5} title="SOCIAL MEDIA" />
+                <LandingBox flex={2} delay={0.6} title="SERVICES OFFERING" />
+                {/* <div className="servicesWrapper landingBox boxFlex">
                     <div className="boxContent">
 
                     </div>
@@ -73,8 +85,23 @@ function LandingPage() {
                         <ArrowRightCircleIcon height={32} />
                     </div>
 
-                </div>
-                <div className="letsWorkWrapper landingBox boxFlex">
+                </div> */}
+                <LandingBox flex={1} imageurl={workimg} delay={0.7} title="LET'S WORK TOGETHER" />
+
+                {/* <div style={{
+                        backgroundImage: `url(${workimg})`
+                    }} className="landingBoxWrapper socialMediaWrapper">
+                    <div  className="boxFlex landingImg">
+                        <div className="boxContent">
+                        </div>
+                        <div className="boxText">
+                            <p>LET'S WORK TOGETHER</p>
+                            <ArrowRightCircleIcon height={32} />
+                        </div>
+                    </div>
+                </div> */}
+                
+                {/* <div className="letsWorkWrapper landingBox boxFlex">
                     <div className="boxContent">
 
                     </div>
@@ -82,7 +109,7 @@ function LandingPage() {
                         <p>LET'S WORK TOGETHER</p>
                         <ArrowRightCircleIcon height={32} />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
