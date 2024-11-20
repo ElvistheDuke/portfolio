@@ -1,4 +1,4 @@
-import { ArrowRightCircleIcon, } from "@heroicons/react/24/outline"
+// import { ArrowRightCircleIcon, } from "@heroicons/react/24/outline"
 import aboutimg from '../assets/about.jpg'
 import { motion } from "motion/react"
 import projectsimg from '../assets/projects.jpg'

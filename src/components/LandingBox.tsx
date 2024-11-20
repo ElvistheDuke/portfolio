@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import aboutimg from "../assets/about.jpg"
+// import aboutimg from "../assets/about.jpg"
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline"
 import React from "react";
 
